@@ -1,0 +1,15 @@
+TRANSLATION:  Select subject id from classes record where wednesday schedule is 1. Join classes table with subject table 
+on subject id to select corresponding subject name from subject table.*/
+CLEAN UP : use schoolschedulingexample;
+select distinct concat( "Subject '", s.subjectname,"'"," is taught on Wednesday") as Result
+from classes c left join subjects s 
+on c.subjectid = s.subjectid 
+where c.WednesdaySchedule = 1
+order by 1*/
+
+use schoolschedulingexample;
+select distinct concat( "Subject '", s.subjectname,"'"," is taught on Wednesday") as Result
+from classes c left join subjects s 
+on c.subjectid = s.subjectid 
+where c.WednesdaySchedule = 1
+order by 1;
