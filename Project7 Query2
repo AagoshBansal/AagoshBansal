@@ -1,0 +1,7 @@
+Translation - average of raw score and handicap score form bowler_scores table
+       Clean up - Select avg (rawscore),avg(HANDICAPSCORE), BOWLERFIRSTNAME,BowlerLastName
+       FROM bowler_scores,bowlers
+       GROUP BY BOWLERFIRSTNAME;*/
+       Select B.BowlerFirstName,avg(rawscore),avg(HandiCapScore),COUNT(B.BowlerID)
+       FROM bowler_scores BW JOIN bowlers B ON B.BowlerID = BW.BowlerID
+       GROUP BY B.BowlerFirstName ORDER BY 1;
