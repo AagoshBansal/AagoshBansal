@@ -1,0 +1,7 @@
+Translation: Select the ingredients that are meats but doesnt have chicken 
+Cleanup: SELECT IngrdientName from Ingredients where InggredientClassId is 2 and Ingredient   name not like "%chicken%" */
+
+SELECT IngredientName 
+from ingredients
+where IngredientClassID = 2
+AND IngredientName not like '%chicken%';
