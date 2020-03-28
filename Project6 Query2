@@ -1,0 +1,11 @@
+TRANSLATION - List of vendor name from vendors table and productname from products table if the wholesaleprice is less than $100
+CLEAN UP -SELECT VendName,ProductName,WholesalePrice
+FROM Vendors,Products,product_vendors
+WHERE Vendors.VendorID=Product_Vendors.VendorID
+AND Products.productnumber=Product_Vendors.Productnumber
+AND Wholesaleprice < 100; */
+SELECT VendName,ProductName,WholesalePrice
+FROM Vendors,Products,product_vendors
+WHERE Vendors.VendorID=Product_Vendors.VendorID
+AND Products.productnumber=Product_Vendors.Productnumber
+AND Wholesaleprice < 100;
