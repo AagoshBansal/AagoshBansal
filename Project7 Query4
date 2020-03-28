@@ -1,0 +1,12 @@
+Translation : Select set of subject categories from categories that have less than 3 professor teaching that subject 
+   Clean Up: SELECT CategoryDescription, COUNT(FC.StaffID) FROM (Categories C INNER JOIN Faculty_Categories FC ON C.CategoryID = FC.CategoryID) INNER JOIN Faculty F ON F.StaffID = FC.StaffID WHERE F.Title = 'Professor' GROUP BY C.CategoryDescription HAVING COUNT(FC.StaffID) < 3; */
+
+SELECT C.CategoryDescription, COUNT(FC.StaffID) AS  ProfCount
+FROM (Categories C
+INNER JOIN Faculty_Categories FC
+ON C.CategoryID = FC.CategoryID)
+INNER JOIN Faculty F
+ON F.StaffID = FC.StaffID
+WHERE F.Title = 'Professor'
+GROUP BY C.CategoryDescription
+HAVING COUNT(FC.StaffID) < 3;
