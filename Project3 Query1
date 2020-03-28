@@ -1,0 +1,1 @@
+select VendCity , VendName From vendors ORDER BY VendCity ASC, VendName ASC
