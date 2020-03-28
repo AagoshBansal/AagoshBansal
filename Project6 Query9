@@ -1,0 +1,12 @@
+TRANSLATION : Select entertainer stage name from those common to the set of entertainers who played for Berg or the set of  entertainers who played for Hallmark. 
+ CLEANUP : Select unique distinct entertainer stage name from the entertainers table inner joined with the engagements table on entertainers.entertainer ID in the entertainers table = engagements.entertainer ID in the engagements table, then inner joined with the customers table on customers.customer ID in the customers table matching = engagements.customer ID in the engagements table where the customer last name is = 'Berg' or the customer last name is = 'Hallmark'              */
+SELECT DISTINCT Entertainers.EntStageName
+FROM (Entertainers
+INNER JOIN Engagements
+ON Entertainers.EntertainerID =
+Engagements.EntertainerID)
+INNER JOIN Customers
+ON Customers.CustomerID =
+Engagements.CustomerID
+WHERE Customers.CustLastName = 'Berg'
+OR Customers.CustLastName = 'Hallmark'
