@@ -1,0 +1,4 @@
+Translation: Select student's first name, student's last name where the student has "B" as first letter or where the student lives is Seattle
+Cleanup: SELECT student first name, student last name, student city FROM students WHERE student first name LIKE'B_%' or student city Seattle*/ 
+use schoolschedulingexample;
+SELECT StudFirstName, StudLastName, StudCity FROM students WHERE  StudFirstName LIKE 'B_%' OR StudCity = 'Seattle';
