@@ -1,0 +1,3 @@
+TRANSLATION - Count the number of classes held in classroom ID 3346
+       Cleanup -   SELECT count(CLASSID) FROM CLASSES WHERE CLASSROOMID="3346"*/
+       SELECT count(CLASSID) FROM CLASSES WHERE CLASSROOMID="3346";
