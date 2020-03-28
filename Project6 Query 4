@@ -1,0 +1,6 @@
+   TRANSLATION : List all recipe class along with the set of its all associative recipes if any.
+   CLEANUP : Select RecipeClassDescription from recipe_classes table and RecipeTitle from recipes table  left join them on RecipeClassID. */
+select distinct  rc.RecipeClassDescription , r.RecipeTitle 
+from recipe_classes as rc
+left join recipes as r
+on rc.RecipeClassID = r.RecipeClassID;
