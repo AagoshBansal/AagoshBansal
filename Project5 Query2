@@ -1,0 +1,6 @@
+Translation: Select recipes name which doesn't have any notes
+Cleanup: SELECT RecipeTitle from Recipes where notes is NULL */
+
+select RecipeTitle
+ from recipes 
+ where notes is null;
