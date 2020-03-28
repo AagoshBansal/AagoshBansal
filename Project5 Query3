@@ -1,0 +1,8 @@
+Translation: Select the bowlers whose last name starts with H
+Cleanup: SELECT FirstName, Last Name , TeamId FROM BOWLERS where TeamId in 3,4,5 
+		and last name like H */
+
+SELECT BowlerFirstName, BowlerLastName, TeamID 
+from bowlers
+where TeamID IN (3,4,5)
+AND BowlerLastName like 'H%';
