@@ -1,0 +1,9 @@
+Translation: Select employees whose earn between $40K and $50K a year and list them alphabetically 
+Cleanup: SELECT Stffirstname, Stflastname, Salary From Staff Where Salary BETWEEN “40000” AND “50000” ORDERBY Stffirstname, Staflastname; */
+SELECT
+	Stfirstname, Stlastname, Salary
+FROM
+	Staff 
+WHERE 
+	Salary BETWEEN ‘40000’ AND ‘50000’
+ORDER BY Stffirstname, Stflastname;
