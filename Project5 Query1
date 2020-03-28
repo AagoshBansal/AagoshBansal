@@ -1,0 +1,7 @@
+Translation: Select staff members who earns between $40k and $50k a year and list them alphabetically 
+Cleanup: SELECT StfFirstName, StfLastName, Salary FROM Staff WHERE Salary between "40000" and "50000" order by StfFirstName and StfLastName; */
+
+SELECT StfFirstName, StfLastName, Salary 
+FROM staff
+WHERE Salary between '40000' and '50000'
+order by StfFirstName, StfLastname;
