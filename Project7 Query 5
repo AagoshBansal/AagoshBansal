@@ -1,0 +1,9 @@
+       SELECT faculty from faculty table with status of "full time" ,select subject from categories table are included in subject table 
+       and faculty-subjects table,get count of fulltime faculty for each category and remove those with count < 3 */
+       SELECT CAT.Categorydescription, count(F.StaffID)
+       FROM Categories CAT JOIN subjects SUB on CAT.CategoryID = SUB.CategoryID
+       JOIN Faculty_subjects FS ON SUB.SubjectID = FS.SubjectID
+       JOIN Faculty F ON F.Staffid = FS.StaffID
+       WHERE F.Status ='Full Time'
+       GROUP BY CAT.CategoryDescription
+       having 'teacher count' < 3 order by 2;
