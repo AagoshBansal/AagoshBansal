@@ -1,0 +1,11 @@
+Translation - Students whose last name is Kennedy or whose live in Seatle
+Clean up - Select  STUDFIRSTNAME, STUDLASTNAME, STUDCITY FROM STUDENTS
+ WHERE STUDLASTNAME LIKE 'Kennedy'OR STUDCITY LIKE 'Seatle' */
+
+SELECT 
+    STUDFIRSTNAME, STUDLASTNAME, STUDCITY
+FROM
+    STUDENTS
+WHERE
+    STUDLASTNAME LIKE 'Kennedy'
+        OR STUDCITY LIKE 'Seatle';
