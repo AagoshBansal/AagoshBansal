@@ -1,0 +1,8 @@
+Translation: Select recipes which have eggs in the preparation column
+Cleanup: SELECT recipetitle form recipes WHERE Preparation LIKE "%eggs%" */  
+SELECT 
+	recipetitle 
+FROM 
+	recipes
+WHERE
+	Preparation LIKE '%eggs%';
