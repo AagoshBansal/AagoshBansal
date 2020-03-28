@@ -1,0 +1,9 @@
+TRANSLATION:  Select only those product Number and Prodct Name  from product 
+table which are not available in order details table. 
+CLEAN UP - use salesordersexample;
+select concat( "Product Name : ",ProductName ," with Product Number # ", ProductNumber, " was never ordered. ") as 'Result' 
+from products where ProductNumber not in (Select ProductNumber from order_details); */
+
+ use salesordersexample;
+select concat( "Product Name : ",ProductName ," with Product Number # ", ProductNumber, " was never ordered. ") as 'Result' 
+from products where ProductNumber not in (Select ProductNumber from order_details);
