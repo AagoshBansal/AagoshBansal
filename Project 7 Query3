@@ -1,0 +1,10 @@
+Translation : Select set of ingredient description and unique count of recipes belonging to that set
+   Clean Up: SELECT IngredientClassDescription, IngredientName, (SELECT COUNT(*) FROM Recipe_Ingredients RI  WHERE RI.IngredientID = I.IngredientID) FROM Ingredient_Classes IC INNER JOIN Ingredients I  ON IC.IngredientClassID =  I.IngredientClassID WHERE  IC.IngredientClassDescription  = 'Meat' */
+SELECT IC.IngredientClassDescription, I.IngredientName,
+ (SELECT COUNT(*)
+ FROM Recipe_Ingredients RI
+ WHERE RI.IngredientID = I.IngredientID) AS RecipeCount
+FROM Ingredient_Classes IC
+INNER JOIN Ingredients I
+ ON IC.IngredientClassID =  I.IngredientClassID
+WHERE  IC.IngredientClassDescription  = 'Meat'
