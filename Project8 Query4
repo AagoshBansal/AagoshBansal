@@ -1,0 +1,10 @@
+TRANSLATION : Delete all data of products that have never been ordered from      product_vendors(foreign key constraint)  then from products table 
+   CLEAN UP :   delete from product_vendors where productnumber not in (select productnumber from   order_details); 
+ delete from products where productnumber not in (select productnumber from order_details); */
+                
+delete from product_vendors
+where productnumber not in
+(select productnumber from order_details);
+delete from products
+where productnumber not in
+(select productnumber from order_details);
