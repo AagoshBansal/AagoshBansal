@@ -1,0 +1,4 @@
+Translation: Select from engagements where end date is at least three days after the start date
+Cleanup: SELECT engagements WHERE EndDate, StartDate bigger or equal than 3*/
+use entertainmentagencyexample;
+select * from engagements where datediff( EndDate,StartDate) >= 3;
