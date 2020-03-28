@@ -1,0 +1,3 @@
+insert into students (StudentID,StudFirstName,StudLastName,StudStreetAddress,StudCity,StudState,StudZipCode,StudAreaCode,StudPhoneNumber)
+select StaffID,StfFirstName,StfLastname,StfStreetAddress,StfCity,StfState,StfZipCode,StfAreaCode,StfPhoneNumber from staff 
+where StfFirstName = "tim" and StfLastname = "smith";
