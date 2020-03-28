@@ -1,0 +1,6 @@
+Translation: Update the students table by setting the area code to 360 where the student ZIP Code is 98270 and 98271. 
+Cleanup: UPDATE Staff and SET StfAreaCode to '360' WHERE StfZipCode = '98270' and '98271' */
+UPDATE Staff
+SET Staff.StfAreaCode = '360'
+WHERE Staff.StfZipCode IN ('98270', '98271')
+
