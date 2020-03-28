@@ -1,0 +1,4 @@
+Translation: Select staff members name, salary if the salary is at least 35000
+Cleanup: SELECT staff first name, staff last name, salary FROM staff WHERE salary bigger or equal to 35000*/
+USE SCHOOLSCHEDULINGEXAMPLE;
+SELECT STFFIRSTNAME, STFLASTNAME, SALARY FROM STAFF WHERE SALARY >= '35000';
