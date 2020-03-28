@@ -1,0 +1,6 @@
+TRANSLATION : Select set of agenst and entertainers that are form same postal code
+   CLEANUP : Select distinct AgtFirstName,AgtLastName form agents and CustFirstName, CustLastName from customers inner join   on Zipcode*/
+select distinct agents.AgtFirstName, agents.AgtLastName, customers.CustFirstName, customers.CustLastName 
+from agents 
+inner join customers 
+on agents.AgtZipCode = customers.CustZipCode;
